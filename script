@@ -1,0 +1,95 @@
+<?php
+$sql = "SELECT * FROM table";
+$result = $conn->query($sql);
+
+	
+if ($result->num_rows > 0) {
+  
+  $mydata = '{
+	 "trackedEntityInstances": [';
+  while($row = $result->fetch_assoc()) {
+    $mydata .= '{
+    "trackedEntityType": "MCPQUTHX1Ze",
+    "orgUnit": "'.$row["HCP_Name"].'",
+    "attributes": [
+        {
+            "attribute": "sB1IHYu2xQT",
+            "value": "'.$row["Name"].'"
+        },
+        {
+            "attribute": "z9uj8ikQFQ2",
+            "value": "'.$row["cnic"].'"
+        },
+        {
+            "attribute": "ntelZthDPpR",
+            "value": "'.$row["col3"].'"
+        }
+	 ],
+     "enrollments": [
+        {
+            "orgUnit": "'.$row["HCP_Name"].'",
+            "program": "Lt6P15ps7f6",
+            "enrollmentDate": "2023-02-27",
+            "incidentDate": "2023-02-27",
+			"events": [
+                {
+                    "program": "Lt6P15ps7f6",
+                    "orgUnit": "'.$row["HCP_Name"].'",
+                    "programStage": "mPdMZNWVrOQ",
+                    "eventDate": "2023-02-27",
+                    "status": "ACTIVE",
+                    "enrollmentStatus": "ACTIVE",
+                    "storedBy": "arslan",                    
+                    "dataValues": [
+                        {
+                            "storedBy": "deo1",
+                            "dataElement": "ZlTtXefsuV5",
+                            "value": "'.$row["col4"].'",
+                            "providedElsewhere": false
+                            
+                        },
+                        { 
+                            "storedBy": "deo1",
+                            "dataElement": "GiSpVEP875H",
+                            "value": "'.$row["col5"].'",
+                            "providedElsewhere": false
+                        }
+                    ]
+                },
+				  {
+                    "program": "Lt6P15ps7f6",
+                    "orgUnit": "'.$row["HCP_Name"].'",
+                    "programStage": "ODD4lMPm0JX",
+                    "eventDate": "2023-02-27",
+                    "status": "ACTIVE",
+                    "enrollmentStatus": "ACTIVE",
+                    "storedBy": "arslan",                    
+                    "dataValues": [
+                        {
+                            "storedBy": "deo1",
+                            "dataElement":"cv1d5PIjzGb",
+                            "value":"HISTORY_NEW",
+                            "providedElsewhere": false
+                            
+                        },
+                        { 
+                            "storedBy": "deo1",
+                            "dataElement":"FvlG7V45vTE",
+                            "value":"supportername",
+                            "providedElsewhere": false
+                        }
+                    ]
+                }
+            ]
+             
+        }
+    ]
+     },';
+  }
+} else {
+  echo "0 results";
+}
+$mydata .="]
+} ";
+echo $mydata;
+exit();
