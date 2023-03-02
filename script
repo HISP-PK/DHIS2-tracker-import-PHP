@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
                     "eventDate": "2023-02-27",
                     "status": "ACTIVE",
                     "enrollmentStatus": "ACTIVE",
-                    "storedBy": "arslan",                    
+                    "storedBy": "deo1",                    
                     "dataValues": [
                         {
                             "storedBy": "deo1",
@@ -63,7 +63,7 @@ if ($result->num_rows > 0) {
                     "eventDate": "2023-02-27",
                     "status": "ACTIVE",
                     "enrollmentStatus": "ACTIVE",
-                    "storedBy": "arslan",                    
+                    "storedBy": "deo1",                    
                     "dataValues": [
                         {
                             "storedBy": "deo1",
