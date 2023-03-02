@@ -1,4 +1,4 @@
-# DHIS2-tracker-import-PHP
+# DHIS2-tracker-data-import-PHP
 clean your csv data acceptable option codes for dropdown in tracker(ie maybe your data is 23-321-2 but tracker accept 233212)<br>
 import csv into DB<br>
 connect db with script<br>
